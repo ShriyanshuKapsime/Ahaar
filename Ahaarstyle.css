@@ -52,6 +52,10 @@ body {
     opacity:1;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> b33a2e65391286ae50c72c52a3d07c440eeac9fe
 .content {
     background-color: #b873338a;
     position: relative;
@@ -86,8 +90,12 @@ body {
     max-width: 900px;
     width: 90%;
     font-family: "Manrope", sans-serif;
+<<<<<<< HEAD
     
 =======
+=======
+}
+>>>>>>> b33a2e65391286ae50c72c52a3d07c440eeac9fe
 .login {
     border-radius:5px;
     background-color: #d4964b;
@@ -146,5 +154,8 @@ body {
   float: right;
   font-size: 24px;
   cursor: pointer;
+<<<<<<< HEAD
 >>>>>>> 9508f32ecae2c583e1acb155b4ba682871f09b2e
+=======
+>>>>>>> b33a2e65391286ae50c72c52a3d07c440eeac9fe
 }
