@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details</title>
+    <link rel="stylesheet" href="Ahaarstyle2.css">
+</head>
+<body>
+    <div class="overlay">
+        <h1>Ahaar-2 --> Personal details</h1>
+        <div id="try">hello</div>
+    </div>
+    <script>
+        const section = document.querySelector("#try");
+        const observer = new IntersectionObserver((enteries) => {
+            if (enteries[0].isIntersecting) {
+                enteries[0].target.classList.add("show");
+            }else {
+                enteries[0].target.classList.remove("show");
+            }
+        }, {})
+        observer.observe(section);
+     
+    </script>
+</body>
+</html>
