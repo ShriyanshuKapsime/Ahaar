@@ -12,32 +12,42 @@ body {
 .blur {
     background-color: #b873338a;
     min-height: 100vh; 
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    /* padding: 2vmin;  */
-    
+    width: 100%; 
 }
 
 .blur .logo {
     width: min(55vmin, 420px);
     height: auto;
     max-height: 70svh; 
+    position: absolute;
+    top: 180px;
+    left: 450px;
     opacity: 1;
     display: block;
     padding-right: 10px;
-    animation: logoscale 2s ease forwards;
+    transition: 2s ease;
+    transition-delay: 800ms;
 }
- @keyframes logoscale {
+@keyframes logoscale {
     0% {
         transform: scale(1);
     } 100% {
         transform: scale(1.25);
     }
- }
+}
+#plate.show-plate {
+  width: min(55vmin, 420px);
+  height: auto;
+  max-height: 70svh; 
+  opacity: 1;
+  display: block;
+  animation: logoscale 2s ease forwards;
+  position: relative;
+  left: 800px;
+  top: 100px;
+
+}
+
 .blur .Webname {
     filter: drop-shadow(0 0 10px #ffe359d3) 
             drop-shadow(0 0 20px #ffa851d3);
@@ -51,6 +61,33 @@ body {
     left: 1vmin;
     opacity:1;
 }
+#moto {
+  width: min(40vmin, 400px);
+  height: 120px;
+  max-height: 25svh;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  transition: 2s ease;
+  transition-delay: 800ms;
+}
+#moto.show-moto {
+  position: absolute;
+  top: 250px;
+  left: 250px;
+  animation: motoscale 2s ease 800ms forwards;
+  filter: drop-shadow(0 0 10px #ffe359d3) 
+            drop-shadow(0 0 20px #ffa851d3);
+  
+}
+@keyframes motoscale {
+    0% {
+        transform: scale(1);
+    } 100% {
+        transform: scale(2.5);
+    }
+}
+
 
 .content {
     background-color: #b873338a;
@@ -60,12 +97,6 @@ body {
     display: flex;
     justify-content: center;
 }
-/* .content img {
-    width: 80%;
-    height: 100%;
-    display: block;
-    opacity: 0.4;
-} */
 .content .text {
     position: absolute;
     color: 	#342003;
@@ -86,8 +117,17 @@ body {
     max-width: 900px;
     width: 90%;
     font-family: "Manrope", sans-serif;
+    opacity: 0;
+    transition: 1s ease-out;
+    transition-delay: 100ms;
 }
-.login {
+#texts.show-text {
+  opacity: 1;
+  top: 30%;
+
+
+}
+.loginbtn {
     border-radius:5px;
     background-color: #d4964b;
     width:auto;
@@ -99,6 +139,24 @@ body {
     cursor:pointer;
     display: flex;
     justify-content: center;
+    align-items: center;
+    transition: 1s ease-out;
+    transition-delay: 300ms;
+}
+#openLogin.show-login {
+  position: relative;
+  bottom: 55px;
+  height: 40px;
+  width: 110px;  
+}
+#openLogin:hover {
+  background-color: #b87333 ;
+}
+.login {
+    background-color: #b873338a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }    
 .modal {
   display: none;
@@ -128,7 +186,7 @@ body {
   border: 1px solid #ccc;
 }
 
-.modal-content button {
+.modal-content #submit {
   padding: 10px 20px;
   background: #d2691e;
   border: none;
@@ -137,7 +195,7 @@ body {
   cursor: pointer;
 }
 
-.modal-content button:hover {
+.modal-content #submit:hover {
   background: #a0522d;
 }
 
@@ -146,3 +204,44 @@ body {
   font-size: 24px;
   cursor: pointer;
 }
+#forlogin {
+  background: #b87333bd;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  padding: 4px 6px;
+  position: relative;
+  left: 150px;
+  
+}
+#forlogin:hover {
+   background: #d2691e;
+}
+#login {
+  padding: 10px 20px;
+  background: #d2691e;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+.closelgn {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+#guest {
+  background: #d7aa80bd;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  padding: 4px 6px;
+  float: left;
+  font-size: 8px;
+}
+#guest:hover {
+  background-color: #d2691e;
+}
+
