@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AhaarCheck</title>
+<link rel="stylesheet" href="Ahaarstyle3.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="blur">
+
+  <img id="heading" src="Check your ahaar.png" alt="Check your Ahaar">
+<form>
+  <div class="meal" id="breakfast">
+    <label for="food0"><h2 class="time">Breakfast</h2></label>
+    <div class="food-items">
+      <div class="food-item">
+        <input id="food0" class="food" list="foods" placeholder="Enter food item">
+        <button type="button" class="add-item">+</button>
+        <button type="button" class="remove-item">❌</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="meal" id="lunch">
+    <label for="food1"><h2 class="time">Lunch</h2></label>
+    <div class="food-items">
+      <div class="food-item">
+        <input id="food1" class="food" list="foods" placeholder="Enter food item">
+        <button type="button" class="add-item">+</button>
+        <button type="button" class="remove-item">❌</button>
+      </div>
+    </div>
+  </div>
+  <div class="meal" id="dinner">
+    <label for="food2"><h2 class="time">Dinner</h2></label>
+    <div class="food-items">
+      <div class="food-item">
+        <input id="food2" class="food" list="foods" placeholder="Enter food item">
+        <button type="button" class="add-item">+</button>
+        <button type="button" class="remove-item">❌</button>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="add-meal">Add Another Meal</button>
+  <div class="meal hide" id="Extra">
+    <label for="foodn"><h2 class="time">Other Meals</h2></label>
+    <div class="food-items">
+      <div class="food-item">
+        <input id="foodn" class="food" list="foods" placeholder="Enter food item">
+        <button type="button" class="add-item">+</button>
+        <button type="button" class="remove-item">❌</button>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="submit">Ahaar Report</button>
+</form>  
+
+
+  <!-- Datalist for food items -->
+  <datalist id="foods">
+    <option value="Rice - 200gm cooked">
+    <option value="Veg Pulao - 1 cup">
+    <option value="Fried Rice - 1 cup">
+    <option value="Dal Khichdi - 1 cup">
+    <option value="Wheat Roti - 3 pieces">
+    <option value="Aalo Paratha - 2 medium pieces">
+    <option value="Paneer Paratha - 2 medium pieces">
+    <option value="Poori - 3-4 pieces">
+    <option value="Besan Chilla - 1 medium piece">
+    <option value="Samosa - 2 pieces">
+    <option value="Idli - 3-4 pieces">
+    <option value="Dosa - 1 medium piece">
+    <option value="Uttapam - 2 medium pieces">
+    <option value="Vada - 2-3 pieces">
+    <option value="Curd Rice - 1 cup">
+    <option value="Lemon Rice - 1 cup">
+    <option value="Upma - 1 cup">
+    <option value="Poha - 1 cup">
+    <option value="Toor Dal - 1 cup cooked">
+    <option value="Moong Dal - 1 cup cooked">
+    <option value="Urad Dal - 1 cup cooked">
+    <option value="Rajma - 1 cup cooked">
+    <option value="Chhole - 1 cup cooked">
+    <option value="Kadhi - 1 cup">
+    <option value="Aalo Gobhi - 1 cup">
+    <option value="Gajar Matar - 1 cup">
+    <option value="Palak Paneer - 1 cup">
+    <option value="Matar Paneer - 1 cup">
+    <option value="Bhindi Masala - 1 cup">
+    <option value="Lauki Sabji - 1 cup">
+    <option value="Sambhar - 1 cup">
+    <option value="Tea - 1 cup">
+    <option value="Coffee - 1 cup">
+    <option value="Curd - 1 cup">
+    <option value="Milk - 250ml">
+    <option value="Nuts (cashew, almonds, pistachio etc) - 30g">
+    <option value="Fruits - 1 medium piece or 1 cup chopped">
+  </datalist>
+  <table id="Resulttable">
+    <caption style="background: linear-gradient(to right, #9a590b, #D4964B); height: 40px; text-align: center; font-weight: 900; color: #4a2a05; padding-top: 10px; font-size: 25px;">Your Ahaar Result</caption>
+    <thead>
+      <tr id="tablehead" style="height: 40px;">
+        <th style="background: linear-gradient(to bottom, #643401, #4a2a05); color: wheat; font-weight: 900; " >Nutrient</th>
+        <th style="background: linear-gradient(to right, #643401, #4a2a05); color: wheat; font-weight: 900;">Intake</th>
+        <th style="background: linear-gradient(to bottom, #643401, #4a2a05); color: wheat; font-weight: 900;">Recommended</th>
+        <th style="background: linear-gradient(to left, #643401, #4a2a05); color: wheat; font-weight: 900;">Deficit/Surplus</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="height: 30px;">
+        <td>Calories</td>
+        <td id="intcalories" class="int"></td>
+        <td id="reccalories" class="rec"></td>
+        <td id="diffcalories" class="diff"></td>
+      </tr>
+      <tr style="height: 30px;">
+        <td>Protein</td>
+        <td id="intprotein" class="int"></td>
+        <td id="recprotein" class="rec"></td>
+        <td id="diffprotein" class="diff"></td>
+      </tr>
+      <tr style="height: 30px;">
+        <td>Vitamin B12</td>
+        <td id="intvitaminb12" class="int"></td>
+        <td id="recvitaminb12" class="rec"></td>
+        <td id="diffvitaminb12" class="diff"></td>
+      </tr>
+      <tr style="height: 30px;">
+        <td>Vitamin D</td>
+        <td id="intvitamind" class="int"></td>
+        <td id="recvitamind" class="rec"></td>
+        <td id="diffvitamind" class="diff"></td>
+      </tr>
+      <tr style="height: 30px;">
+        <td>Iron</td>
+        <td id="intiron" class="int"></td>
+        <td id="reciron" class="rec"></td>
+        <td id="diffiron" class="diff"></td>
+      </tr>
+      <tr style="height: 30px;">
+        <td>Zinc</td>
+        <td id="intzinc" class="int"></td>
+        <td id="reczinc" class="rec"></td>
+        <td id="diffzinc" class="diff"></td>
+      </tr>
+      <tr style="height: 30px;">
+        <td>Magnesium</td>
+        <td id="intmagnesium" class="int"></td>
+         <td id="recmagnesium" class="rec"></td>
+        <td id="diffmagnesium" class="diff"></td>
+      </tr>
+      <tr style="height: 30px;">
+        <td>Folate</td>
+        <td id="intfolate" class="int"></td>
+        <td id="recfolate" class="rec"></td>
+        <td id="difffolate" class="diff"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<script src="ahaarapp3.js"></script>
+</body>
+</html>
