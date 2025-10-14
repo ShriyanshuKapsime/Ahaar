@@ -41,6 +41,7 @@ function collectFormData() {
   const name = document.querySelector('input[placeholder="Name"]').value;
   const height = document.querySelector('input[placeholder="Height(in cm)"]').value;
   const weight = document.querySelector('input[placeholder="Weight(in kg)"]').value;
+  const age = document.querySelector('input[placeholder="Age"]').value;
   const gender = genderButton.dataset.value || 'Not selected';
   const activity = activityButton.dataset.value || 'Not selected';
   
@@ -49,12 +50,16 @@ function collectFormData() {
     height: height,
     weight: weight,
     gender: gender,
+    age: age,
     activity: activity
   };
   
   console.log('Form Data:', userData);
   return userData;
 }
-
-// Add a submit button and call this function
-// document.getElementById('submitBtn').addEventListener('click', collectFormData);
+const proceedButton = document.getElementById('proceed');
+proceedButton.addEventListener('click', () => {
+  const data = collectFormData();
+  sessionStorage.setItem('userData', JSON.stringify(data));
+  window.location.href = "Ahaar3.html";
+});
