@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(Background\ ahaar.jpeg);
+    background-size: cover;
+    min-height: 100svh;
+}
+.blur{
+    background-color: #b873338a;
+    min-height: 100vh; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+#heading {
+    height: 200px;
+    width: 500px;
+    margin-left: 400px;
+    filter: drop-shadow(0 0 10px #ffe359d3) 
+            drop-shadow(0 0 20px #ffa851d3);
+}
+.meal {
+    margin-bottom: 30px;
+}
+.food-item {
+    margin-left: 40px;
+}
+.meal h2 {
+    color:#1f2801;
+    margin-bottom: 15px;
+    font-family: "Manrope", sans-serif;
+    background: linear-gradient(to right, #9a590b, #D4964B);
+    padding: 5px 50px 5px 50px;
+    border-radius: 5%;
+    box-shadow: 10px #4F3A30;
+    text-align: center;
+    display: inline-block;
+
+}
+.time {
+    margin-left: 30px;
+}
+.food-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    display: inline;
+}
+.food:hover {
+    background: linear-gradient(to right, #D4964B, #9a590b);
+}
+.food {
+    background-color: #807850f3;
+    height: 20px;
+    width: 40vh;
+    border: black solid 2px;
+}
+input::placeholder {
+    color: rgba(0, 0, 0, 0.573);
+}
+select, input {
+    padding: 5px;
+    margin-right: 5px;
+}
+.add-item {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.add-meal {
+    height: 30px;
+    width: 150px;
+    background: linear-gradient(to right, #783c04c3, #f39265a3 );
+    margin-left: 30px;
+    margin-bottom: 20px;
+    border-radius: 20%;
+    box-shadow: 2px 2px 2px 2px #D4964B;
+}
+.add-meal:hover {
+    box-shadow: 3px 3px 3px 3px #D4964B;
+}
+.hide {
+    display: none;
+}
+.addcss {
+    background-color: #807850f3;
+    height: 20px;
+    width: 40vh;
+    border: black solid 2px;
+}
+.submit {
+    color: wheat;
+    margin-bottom: 15px;
+    font-family: "Manrope", sans-serif;
+    background-color: #643401;
+    padding: 10px 50px 10px 50px;
+    border-radius: 5%;
+    box-shadow: 10px #4F3A30;
+    text-align: center;
+    display: block;
+    margin-left: 81vh ;
+    margin-top: 9vh;
+    cursor: pointer;
+}
+.submit:hover {
+    background: linear-gradient(to bottom,#807850, rgb(11, 45, 11)  );
+}
+#Resulttable {
+  width: 90%;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: none;
+}
+#Resulttable td:nth-child(1),
+#Resulttable th:nth-child(1) {
+  background: linear-gradient(to bottom, #d3a478, white);
+  width: auto;
+  color: rgb(11, 45, 11);
+  font-weight: 800;
+}
+#Resulttable td:nth-child(3),
+#Resulttable th:nth-child(3) {
+  background: linear-gradient(to top,rgba(120, 173, 99, 0.868), white  );
+  width: auto;
+  color:rgb(11, 45, 11) ;
+  font-weight: 700;
+}
+#Resulttable td:nth-child(2),
+#Resulttable th:nth-child(2) {
+  background: linear-gradient(to bottom, rgba(184, 135, 79, 0.868), white );
+  width: auto;
+  color: black;
+  font-weight: 700;
+}
+#Resulttable td:nth-child(4),
+#Resulttable th:nth-child(4) {
+  background: linear-gradient(to bottom, #ec6a6a75, white  );
+  width: auto;
+  color: rgb(100, 8, 8);
+  font-weight: 800;
+}
+#Conquer {
+    color: wheat;
+    /* margin-bottom: 15px; */
+    font-family: "Manrope", sans-serif;
+    background-color: #643401;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5%;
+    box-shadow: 10px #4F3A30;
+     text-align: center;
+    display: block;
+    width: 250px;
+    height: 40px;
+    cursor: pointer;
+    margin: 15px 505px 15px auto;
+    display: none;
+
+}
+#Conquer:hover {
+    background: linear-gradient(to bottom,#807850, rgb(11, 45, 11)  );
+}
+.conquer {
+    color: wheat;
+    margin-bottom: 15px; 
+    font-family: "Manrope", sans-serif;
+    background-color: #643401;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5%;
+    box-shadow: 10px #4F3A30;
+     text-align: center;
+    display: block;
+    width: 250px;
+    height: 40px;
+    cursor: pointer;
+    margin: 15px 505px 15px auto;
+}

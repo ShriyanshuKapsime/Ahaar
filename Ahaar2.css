@@ -1,0 +1,162 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HTML & body */
+html, body {
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Background image */
+body {
+    background: url("Background ahaar.jpeg") no-repeat center center / cover;
+    background-attachment: fixed;
+}
+
+/* Fullscreen blur overlay */
+.blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(184, 115, 51, 0.54);
+    z-index: 1; /* behind form */
+}
+
+/* Form container */
+.DIV {
+    position: relative;
+    z-index: 2; /* above blur */
+    /* max-width: 650px; */
+    width: 80%; /* responsive width */
+    margin: 60px auto; /* centers horizontally */
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(25px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 24px;
+    box-shadow: 
+        0 8px 32px rgba(31, 38, 135, 0.25),
+        inset 0 1px 1px rgba(255, 255, 255, 0.6);
+    display: flex;
+    flex-direction: column; /* stack children vertically */
+    align-items: center; /* center horizontally */
+}
+
+/* Button/input container */
+.button-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* center each button/input inside container */
+}
+
+/* Inputs */
+input {
+    background: transparent;
+    /* border: none; */
+    border: 2px solid #8B5A2B;
+    color: #4A2511;
+    padding: 8px;
+    width: 100%;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Dropdown containers */
+.dropdown, .dropdown2 {
+    position: relative;
+    width: 50%;
+}
+
+/* Dropdown buttons */
+.dropdown-button, .dropdown-button2 {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #d4964b;
+    text-align: left;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.dropdown-button:hover, .dropdown-button2:hover {
+    background-color: #633a07;
+    transform: scale(1.05);
+}
+
+/* Dropdown content */
+.dropdown-content, .dropdown-content2 {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #e8c294;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    z-index: 3;
+}
+
+.dropdown-content a, .dropdown-content2 a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: #2b2926;
+}
+
+.dropdown-content a:hover, .dropdown-content2 a:hover {
+    background-color: #dbb940;
+    border-radius: 8px;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown2:hover .dropdown-content2 {
+    display: block;
+}
+
+/* Proceed button */
+.proL {
+    background-color: #92350e;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+}
+
+.proL:hover {
+    background-color: #b45309;
+    transform: scale(1.05);
+}
+
+/* Navbar image */
+.navbar img {
+    width: 650px;
+    height: 150px;
+}
