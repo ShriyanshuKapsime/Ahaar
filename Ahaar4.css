@@ -56,10 +56,12 @@ body {
 }
 .card-container {
     display: flex;
+    border-radius: 4px;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 100px;
     width: 300px;
+    transition: all 0.3s ease-in-out;
 }
 .card {
     width: 250px;
@@ -75,4 +77,10 @@ body {
 }
 .card-content {
     padding: 7px;
+    font-family: "Manrope", sans-serif;
+}
+.card-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
