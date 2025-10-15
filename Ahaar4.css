@@ -17,6 +17,8 @@ body {
     display: flex;
     justify-content: center;
     text-shadow: #c9d2528a;
+    filter: drop-shadow(0 0 10px #ffe359d3) 
+            drop-shadow(0 0 20px #ffa851d3);
 }
 .glass {
     position: relative;
@@ -77,10 +79,33 @@ body {
 }
 .card-content {
     padding: 7px;
+<<<<<<< HEAD
     font-family: "Manrope", sans-serif;
 }
 .card-container:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+=======
+}
+#defrecall {
+     background: linear-gradient(to bottom, #bf742f, white);
+    height: 75px;
+}
+#defhead {
+    margin-bottom: 10px;
+    margin-left: 560px;
+    color: #2e0d02;
+}
+#nutdef {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    color: rgb(100, 8, 8);
+}
+.defs {
+    border: 2px solid rgb(53, 26, 3);
+    padding: 5px;
+    font-weight: 700;
+>>>>>>> 1b1027ff7fcff03604b5514c48c1ea95d1a96138
 }
