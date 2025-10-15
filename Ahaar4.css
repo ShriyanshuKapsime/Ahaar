@@ -17,6 +17,8 @@ body {
     display: flex;
     justify-content: center;
     text-shadow: #c9d2528a;
+    filter: drop-shadow(0 0 10px #ffe359d3) 
+            drop-shadow(0 0 20px #ffa851d3);
 }
 .glass {
     position: relative;
@@ -75,4 +77,24 @@ body {
 }
 .card-content {
     padding: 7px;
+}
+#defrecall {
+     background: linear-gradient(to bottom, #bf742f, white);
+    height: 75px;
+}
+#defhead {
+    margin-bottom: 10px;
+    margin-left: 560px;
+    color: #2e0d02;
+}
+#nutdef {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    color: rgb(100, 8, 8);
+}
+.defs {
+    border: 2px solid rgb(53, 26, 3);
+    padding: 5px;
+    font-weight: 700;
 }
