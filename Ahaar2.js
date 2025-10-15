@@ -60,6 +60,6 @@ function collectFormData() {
 const proceedButton = document.getElementById('proceed');
 proceedButton.addEventListener('click', () => {
   const data = collectFormData();
-  sessionStorage.setItem('userData', JSON.stringify(data));
+  localStorage.setItem('userData', JSON.stringify(data));
   window.location.href = "Ahaar3.html";
 });

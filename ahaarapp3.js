@@ -291,60 +291,71 @@ const recommended = {
 };
 document.querySelector(".submit").addEventListener("click", () => {
   let total = { calories: 0, protein: 0, iron: 0, vitaminD: 0, zinc: 0, magnesium: 0, folate: 0, vitaminB12: 0};
-  document.querySelectorAll(".food").forEach(input => {
-    const item = input.value.trim();
-    if (foodData[item]) {
-      const nutrients = foodData[item];
-      for (let key in total) {
-        total[key] += nutrients[key];
+      document.querySelectorAll(".food").forEach(input => {
+        const item = input.value.trim();
+        if (foodData[item]) {
+          const nutrients = foodData[item];
+          for (let key in total) {
+            total[key] += nutrients[key];
+          }
+        }
+        
+      });
+
+    document.getElementById("Resulttable").style.display = "table";
+    
+    document.getElementById("intcalories").textContent = total.calories + " kcal";
+    document.getElementById("intprotein").textContent = total.protein + " g";
+    document.getElementById("intiron").textContent = total.iron + " mg";
+    document.getElementById("intvitamind").textContent = total.vitaminD + " µg";
+    document.getElementById("intzinc").textContent = total.zinc + " mg";
+    document.getElementById("intmagnesium").textContent = total.magnesium + " mg";
+    document.getElementById("intfolate").textContent = total.folate + " µg";
+    document.getElementById("intvitaminb12").textContent = total.vitaminB12 + " µg";
+
+    // Recommended
+    document.getElementById("reccalories").textContent = recommended.calories + " kcal";
+    document.getElementById("recprotein").textContent = recommended.protein + " g";
+    document.getElementById("reciron").textContent = recommended.iron + " mg";
+    document.getElementById("recvitamind").textContent = recommended.vitaminD + " µg";
+    document.getElementById("reczinc").textContent = recommended.zinc + " mg";
+    document.getElementById("recmagnesium").textContent = recommended.magnesium + " mg";
+    document.getElementById("recfolate").textContent = recommended.folate + " µg";
+    document.getElementById("recvitaminb12").textContent = recommended.vitaminB12 + " µg";
+
+    function diff(intake, rec) {
+        let val = intake - rec;
+        return (val >= 0 ? "+" : "") + val.toFixed(1);
       }
-    }
-});
 
-document.getElementById("Resulttable").style.display = "table"; 
+      document.getElementById("diffcalories").textContent = diff(total.calories, recommended.calories);
+      document.getElementById("diffprotein").textContent = diff(total.protein, recommended.protein);
+      document.getElementById("diffiron").textContent = diff(total.iron, recommended.iron);
+      document.getElementById("diffvitamind").textContent = diff(total.vitaminD, recommended.vitaminD);
+      document.getElementById("diffzinc").textContent = diff(total.zinc, recommended.zinc);
+      document.getElementById("diffmagnesium").textContent = diff(total.magnesium, recommended.magnesium);
+      document.getElementById("difffolate").textContent = diff(total.folate, recommended.folate);
+      document.getElementById("diffvitaminb12").textContent = diff(total.vitaminB12, recommended.vitaminB12);
 
-document.getElementById("intcalories").textContent = total.calories + " kcal";
-document.getElementById("intprotein").textContent = total.protein + " g";
-document.getElementById("intiron").textContent = total.iron + " mg";
-document.getElementById("intvitamind").textContent = total.vitaminD + " µg";
-document.getElementById("intzinc").textContent = total.zinc + " mg";
-document.getElementById("intmagnesium").textContent = total.magnesium + " mg";
-document.getElementById("intfolate").textContent = total.folate + " µg";
-document.getElementById("intvitaminb12").textContent = total.vitaminB12 + " µg";
+      const conquerButton = document.getElementById("Conquer");
+      conquerButton.style.display = "inline-block";
 
-// Recommended
-document.getElementById("reccalories").textContent = recommended.calories + " kcal";
-document.getElementById("recprotein").textContent = recommended.protein + " g";
-document.getElementById("reciron").textContent = recommended.iron + " mg";
-document.getElementById("recvitamind").textContent = recommended.vitaminD + " µg";
-document.getElementById("reczinc").textContent = recommended.zinc + " mg";
-document.getElementById("recmagnesium").textContent = recommended.magnesium + " mg";
-document.getElementById("recfolate").textContent = recommended.folate + " µg";
-document.getElementById("recvitaminb12").textContent = recommended.vitaminB12 + " µg";
-
-function diff(intake, rec) {
-    let val = intake - rec;
-    return (val >= 0 ? "+" : "") + val.toFixed(1);
-  }
-
-  document.getElementById("diffcalories").textContent = diff(total.calories, recommended.calories);
-  document.getElementById("diffprotein").textContent = diff(total.protein, recommended.protein);
-  document.getElementById("diffiron").textContent = diff(total.iron, recommended.iron);
-  document.getElementById("diffvitamind").textContent = diff(total.vitaminD, recommended.vitaminD);
-  document.getElementById("diffzinc").textContent = diff(total.zinc, recommended.zinc);
-  document.getElementById("diffmagnesium").textContent = diff(total.magnesium, recommended.magnesium);
-  document.getElementById("difffolate").textContent = diff(total.folate, recommended.folate);
-  document.getElementById("diffvitaminb12").textContent = diff(total.vitaminB12, recommended.vitaminB12);
-
+      // Store deficit and move to next page on click
+      conquerButton.onclick = () => {
+        const deficitData = {};
+        for (let key in total) {
+          deficitData[key] = Math.max(recommended[key] - total[key], 0).toFixed(2);
+        }
+        localStorage.setItem("deficitData", JSON.stringify(deficitData));
+        window.location.href = "Ahaar4.html";
+      };
+  
 
 });
 
 if (userData) {
     console.log('User data from previous page:', userData);
-    // Example: you can show name somewhere
     const heading = document.getElementById("heading");
     heading.alt = `Check your Ahaar, ${userData.name}`;
 }
-
-
 

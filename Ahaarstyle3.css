@@ -148,3 +148,38 @@ select, input {
   color: rgb(100, 8, 8);
   font-weight: 800;
 }
+#Conquer {
+    color: wheat;
+    /* margin-bottom: 15px; */
+    font-family: "Manrope", sans-serif;
+    background-color: #643401;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5%;
+    box-shadow: 10px #4F3A30;
+     text-align: center;
+    display: block;
+    width: 250px;
+    height: 40px;
+    cursor: pointer;
+    margin: 15px 505px 15px auto;
+    display: none;
+
+}
+#Conquer:hover {
+    background: linear-gradient(to bottom,#807850, rgb(11, 45, 11)  );
+}
+.conquer {
+    color: wheat;
+    margin-bottom: 15px; 
+    font-family: "Manrope", sans-serif;
+    background-color: #643401;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5%;
+    box-shadow: 10px #4F3A30;
+     text-align: center;
+    display: block;
+    width: 250px;
+    height: 40px;
+    cursor: pointer;
+    margin: 15px 505px 15px auto;
+}
