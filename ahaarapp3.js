@@ -1,5 +1,5 @@
 // On page load
-const userData = JSON.parse(sessionStorage.getItem('userData'));
+const userData = JSON.parse(localStorage.getItem('userData'));
 
 function setupButtons(container) {
     // Add new item

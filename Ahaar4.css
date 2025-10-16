@@ -9,7 +9,7 @@ body {
 }
 .blur {
     background-color: #b873338a;
-    min-height: 260vh; 
+    min-height: 320vh; 
     width: 100%;
     margin: 0;
 }
@@ -105,4 +105,28 @@ body {
     border: 2px solid rgb(53, 26, 3);
     padding: 5px;
     font-weight: 700;
+}
+.calorie {
+    display: none;
+}
+.protein {
+    display: none;
+}
+.vitaminb12 {
+    display: none;
+}
+.vitamind {
+    display: none;
+}
+.zinc {
+    display: none;
+}
+.iron {
+    display: none;
+}
+.magnesium {
+    display: none;
+}
+.folate {
+    display: none;
 }
