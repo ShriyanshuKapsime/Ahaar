@@ -183,3 +183,145 @@ select, input {
     cursor: pointer;
     margin: 15px 505px 15px auto;
 }
+@media (max-width: 1030px) {
+  #heading {
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .blur {
+    align-items: center;
+    /* padding: 20px; */
+  }
+
+  .meal {
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .food {
+    width: 50vw;
+    height: 25px;
+  }
+
+  .submit {
+    margin: 40px auto;
+    font-size: 18px;
+  }
+
+  #Resulttable {
+    width: 95%;
+    font-size: 15px;
+  }
+
+  #Conquer {
+    margin: 20px auto;
+  }
+}
+
+/* For mobile devices (width ≤ 768px) */
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+
+  #heading {
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .meal h2 {
+    font-size: 20px;
+    padding: 5px 20px;
+  }
+
+  .food {
+    width: 50vw;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .add-item,
+  .remove-item {
+    margin: 5px;
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+
+  .add-meal {
+    width: 180px;
+    font-size: 14px;
+    border-radius: 25px;
+  }
+
+  .submit {
+    margin: 30px auto;
+    font-size: 16px;
+    padding: 10px 30px;
+  }
+
+  #Resulttable {
+    width: 95%;
+    font-size: 13px;
+  }
+
+  #Resulttable th, #Resulttable td {
+    padding: 6px;
+  }
+
+  #Conquer {
+    width: 200px;
+    font-size: 15px;
+    height: auto;
+    margin: 20px auto;
+  }
+}
+
+/* For very small screens (≤ 480px) */
+@media (max-width: 480px) {
+  .blur {
+    padding: 10px;
+  }
+
+  #heading {
+    width: 90%;
+  }
+
+  .meal h2 {
+    font-size: 18px;
+    padding: 4px 10px;
+  }
+
+  .food {
+    width: 70vw;
+  }
+
+  .add-item,
+  .remove-item {
+    font-size: 14px;
+    padding: 3px 8px;
+  }
+
+  .add-meal {
+    width: 160px;
+    font-size: 13px;
+  }
+
+  .submit {
+    font-size: 15px;
+    padding: 8px 20px;
+  }
+
+  #Resulttable {
+    font-size: 12px;
+  }
+
+  #Conquer {
+    width: 180px;
+    font-size: 14px;
+  }
+}

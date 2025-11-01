@@ -88,12 +88,13 @@ body {
 }
 #defrecall {
      background: linear-gradient(to bottom, #bf742f, white);
-    height: 75px;
+    height: 100px;
 }
 #defhead {
     margin-bottom: 10px;
     margin-left: 560px;
     color: #2e0d02;
+
 }
 #nutdef {
     display: flex;
@@ -129,4 +130,139 @@ body {
 }
 .folate {
     display: none;
+}
+
+@media (max-width: 1200px) {
+  .glass {
+    width: 90%;
+    padding: 35px;
+  }
+
+  .card {
+    width: 240px;
+  }
+
+  #defhead h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Tablets (max-width: 900px) */
+@media (max-width: 900px) {
+  .glass {
+    width: 92%;
+    padding: 30px;
+  }
+
+  .div1, .div2, .div3 {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card {
+    width: 220px;
+  }
+
+  .defs {
+    font-size: 14px;
+  }
+
+  #defhead h2 {
+    font-size: 1.6rem;
+  }
+  #defhead{
+    position: relative;
+    margin-left: 350px;
+  }
+  #defrecall{
+    height: 100px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 730px) {
+  .blur {
+    min-height: auto;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .complete img {
+    width: 250px;
+    margin-top: 15px;
+  }
+
+  #defrecall {
+    width: 80%;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .defs {
+    padding-right: 2px;
+    padding-left: 10px;
+  }
+  #defhead {
+    position: relative;
+    margin-left: 10px ;
+  }
+
+  #nutdef {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .glass {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .div1, .div2, .div3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .card-content {
+    font-size: 14px;
+  }
+
+  .card-content h2 {
+    font-size: 18px;
+  }
+  #defrecall{
+    height: 375px;
+  }
+}
+
+/* Small Mobiles (max-width: 400px) */
+@media (max-width: 400px) {
+  .complete img {
+    width: 200px;
+  }
+
+  .glass {
+    width: 96%;
+    padding: 15px;
+  }
+
+  .card {
+    width: 95%;
+  }
+
+  .defs {
+    font-size: 13px;
+    padding: 4px 6px;
+  }
+
+  #defhead h2 {
+    font-size: 1.4rem;
+  }
 }

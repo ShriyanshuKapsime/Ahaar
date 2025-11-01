@@ -244,4 +244,81 @@ body {
 #guest:hover {
   background-color: #d2691e;
 }
+/* --- Large Tablets / Small Laptops (max-width: 1024px) --- */
+@media (max-width: 1030px) {
+  .blur .logo {
+    top: 120px;
+    left: 300px;
+    width: min(55vmin, 340px);
+  }
+  #plate.show-plate {
+    left: 580px;
+    top: 150px;
+  }
+  #moto {
+    left: 80px;
+    top: 80px;
+  }
+  #moto.show-moto {
+    top: 220px;
+    left: 130px;
+  }
+  @keyframes motoscale {
+    0% {
+        transform: scale(1);
+    } 100% {
+        transform: scale(2);
+    }
+}
+  .content .text {
+    font-size: 16px;
+    padding: 30px;
+    max-width: 700px;
+  }
+  #openLogin.show-login {
+    bottom: 40px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .blur .logo {
+    top: 120px;
+    left: 300px;
+    width: min(55vmin, 340px);
+  }
+  @keyframes logoscale {
+    0% {
+        transform: scale(1);
+    } 100% {
+        transform: scale(1.10);
+    }
+}
+  #plate.show-plate {
+    left: 500px;
+    top: 150px;
+  }
+  #moto {
+    left: 80px;
+    top: 80px;
+  }
+  #moto.show-moto {
+    top: 220px;
+    left: 130px;
+  }
+  @keyframes motoscale {
+    0% {
+        transform: scale(1);
+    } 100% {
+        transform: scale(1.8);
+    }
+}
+  .content .text {
+    font-size: 16px;
+    padding: 30px;
+    max-width: 700px;
+  }
+  #openLogin.show-login {
+    bottom: 40px;
+  }
+}
 
